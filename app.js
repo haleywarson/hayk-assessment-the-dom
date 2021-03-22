@@ -16,13 +16,13 @@ image.src = 'https://s3.amazonaws.com/ceblog/wp-content/uploads/2016/04/22110359
 document.getElementById("topHead").append(image)
 
 // * Deletes the paragraph tags that are direct children of `<main>`
-// const mainP = document.querySelectorAll("main > p")
-
-// function removeMainChildren() {
-//     mainP.remove();
-// }
-
-// mainP.forEach(removeMainChildren());
+const mainP = document.querySelectorAll("main > p")
+function removeMainChildren() {
+  mainP.forEach((paragraph) => {
+    paragraph.remove();
+  });
+}
+removeMainChildren();
 
 
 // * Adds a paragraph tag to the end of the document that says "Your account has been compromised."
